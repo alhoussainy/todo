@@ -1,0 +1,7 @@
+{
+  "name": "ngprojet",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

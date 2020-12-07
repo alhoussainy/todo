@@ -1,0 +1,25 @@
+<ion-grid >
+    <ion-row d-flex p-2-sm >
+        <ion-col size="12"  >
+            <form [formGroup]="formTodo" (ngSubmit)=" Save()">
+                <h1> Création</h1>
+                <ion-item>
+                    <ion-label>Todo</ion-label>
+                    <ion-input type="text" formControlName="nom"></ion-input>
+                    <span *ngIf="!(formTodo.get('nom').valid) &&  (formTodo.get('nom').dirty)" class="red">
+                        nom is requiered
+                    </span>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Description</ion-label>
+                    <ion-textarea formControlName="description"></ion-textarea>
+                    <span *ngIf="!formTodo.get('description').valid && formTodo.get('description').dirty" class="red">
+                        description is requiered
+                    </span>
+                </ion-item>
+                <ion-button   ion-button type="submit">Save</ion-button>
+                <ion-button  [routerLink]="['/list']">List</ion-button>
+            </form>
+        </ion-col>
+    </ion-row>
+</ion-grid>

@@ -1,0 +1,17 @@
+:host{
+    left: 0px;
+    right: 0px;
+    top:0px;
+    position:absolute;
+    display: flex;
+    justify-content: center;
+     min-width: 20%;
+     height: 100vh;
+     animation-name: taille;
+     animation-duration: 1s;
+     background-color:#FF4500;
+    display: block;   
+    border: ridge;
+}
+
+
