@@ -1,0 +1,9 @@
+<h1 [style.color]="'red'">creation</h1>
+
+
+  
+  <input  placeholder="name" #nom/> <br>
+  <input  placeholder="description " #desc/><br>
+
+  <button (click)="clickSave(nom.value ,desc.value)"> Save</button>
+

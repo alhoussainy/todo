@@ -1,0 +1,5 @@
+<h1> TodoList</h1>
+
+<ul *ngFor="let todo of todolist">
+ <li>{{ todo.name}}</li> <li>{{ todo.description}}</li> <button (click)="myOndelete(todo)">suprimer</button>
+</ul>
