@@ -8,6 +8,7 @@ import { TodoService } from '../shared/todo.service';
   templateUrl: './todo.component.html',
   styleUrls: ['./todo.component.scss'],
 })
+
 export class TodoComponent implements OnInit {
 
   public todo: Todo;
@@ -36,5 +37,4 @@ export class TodoComponent implements OnInit {
   }
 
 }
-
 

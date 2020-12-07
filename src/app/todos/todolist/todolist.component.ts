@@ -2,13 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { Todo } from '../shared/todo.model';
 import { TodoService } from '../shared/todo.service';
 import { environment } from 'src/environments/environment';
+
 @Component({
   selector: 'app-todolist',
   templateUrl: './todolist.component.html',
   styleUrls: ['./todolist.component.scss'],
 })
 export class TodolistComponent {
-
   public todolist: Todo[];
   public erreur: boolean;
   constructor(private todoService: TodoService) {

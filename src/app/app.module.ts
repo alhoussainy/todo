@@ -16,9 +16,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   declarations: [AppComponent,
   ],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot() , TodosModule,
+  imports: [BrowserModule,
+    IonicModule.forRoot() ,
+     TodosModule,
+     FormsModule,
+     ReactiveFormsModule,
    AppRoutingModule
   ],
+
   providers: [
     StatusBar,
     SplashScreen,
