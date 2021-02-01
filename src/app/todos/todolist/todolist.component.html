@@ -1,19 +1,18 @@
 
-
 <h1> Todolist</h1>
  <div *ngIf= "erreur">
-   
   <button (click)="getError()">réessayer</button>
  </div>
-
 <p *ngIf="!todolist && !erreur">
   loading
 </p>
 <div class="todo">
-  <ul *ngFor="let todo of todolist">
-    <h4><li>{{ todo.nom}}</li></h4>
+  <ul *ngFor="let todo of todolist ; let i=index">
+    <h4><li> {{i+1}} {{ todo.name}}</li></h4>
     <p>{{ todo.description}}</p>
-    <ion-button classe ="bouton" color="danger" (click)="onDelete(todo)">delete</ion-button>
+     
+    <ion-button classe ="bouton" color="danger" [disabled] = "index === i " (click)="onDelete(todo ,i)">delete</ion-button>
+
     <ion-button classe ="bouton"  [routerLink]="['/todo']">create</ion-button>
 </ul>
 </div>

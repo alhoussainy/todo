@@ -6,8 +6,8 @@
                 <h1> Création</h1>
                 <ion-item>
                     <ion-label>Todo</ion-label>
-                    <ion-input type="text" formControlName="nom"></ion-input>
-                    <span *ngIf="!(formTodo.get('nom').valid) &&  (formTodo.get('nom').dirty)" class="red">
+                    <ion-input type="text" formControlName="name"></ion-input>
+                    <span *ngIf="!(formTodo.get('name').valid) &&  (formTodo.get('name').dirty)" class="red">
                         nom is requiered
                     </span>
                 </ion-item>
@@ -18,10 +18,10 @@
                         description is requiered
                     </span>
                 </ion-item>
-                <ion-button   ion-button type="submit">Save</ion-button>
-                <ion-button  [routerLink]="['/list']">List</ion-button>
+                <ion-button [disabled]="disable" type="submit">Save</ion-button>
             </form>
         </ion-col>
     </ion-row>
 </ion-grid>
 
+<!-- [routerLink]="['/list']"  -->

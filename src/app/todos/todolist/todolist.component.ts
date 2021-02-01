@@ -11,14 +11,17 @@ import { environment } from 'src/environments/environment';
 export class TodolistComponent {
   public todolist: Todo[];
   public erreur: boolean;
+  public index;
+  public disable: boolean;
   constructor(private todoService: TodoService) {
+    this.disable = false;
     this.getError();
   }
+
 
   getError(): void {
 
     this.todoService.get().subscribe(
-
       (todolist: Todo[]) => {
         this.erreur = false;
         this.todolist = this.todoService.todolist = todolist;
@@ -30,9 +33,19 @@ export class TodolistComponent {
 
   }
 
-  onDelete(todo: Todo) {
+  onDelete(todo: Todo , index: number) {
 
-    this.todoService.delete(todo);
+    this.index = index;
+    this.disable = true;
+    console.log(this.index);
+    this.todoService.delete(todo).subscribe(
+      () => {
+
+        this.index = null;
+        this.disable = false;
+      },
+      () => { }
+    );
   }
 
 }

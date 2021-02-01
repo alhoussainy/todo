@@ -1,7 +1,8 @@
 {
   "name": "ngprojet",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
   "type": "angular"
 }
