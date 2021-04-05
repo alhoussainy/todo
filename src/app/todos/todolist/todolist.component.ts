@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Todo } from '../shared/todo.model';
 import { TodoService } from '../shared/todo.service';
-import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-todolist',
@@ -33,7 +32,7 @@ export class TodolistComponent {
 
   }
 
-  onDelete(todo: Todo , index: number) {
+  onDelete(todo: Todo, index: number) {
 
     this.index = index;
     this.disable = true;

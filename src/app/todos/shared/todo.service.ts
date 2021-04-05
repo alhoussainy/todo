@@ -12,6 +12,7 @@ import { tap } from 'rxjs/operators';
 export class TodoService {
   public todolist: Todo[] = [];
   public erreur: boolean;
+  public create = ''
   /**
    *
    * @param http;
@@ -37,7 +38,7 @@ export class TodoService {
 
   post(todo: Todo): Observable<Todo> {
 
-    return this.http.post<Todo>(environment.api.url, todo).pipe(
+    return this.http.post<Todo>(environment.api.post, todo).pipe(
       tap(
         () => {
           this.todolist.push(todo);
